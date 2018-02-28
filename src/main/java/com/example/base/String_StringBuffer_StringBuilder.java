@@ -28,5 +28,15 @@ public class String_StringBuffer_StringBuilder {
 //		使用string对字符串进行累加100000次 cost:26934
 //		使用StringBuffer对字符串进行累加100000次 cost:2
 //      类加100000次时差距已经很大了
+		
+		String name = "Hello";
+		name = "World";
+		// 上面2行操作实际上是创建了两个String对象
+		
+		String s1 = "Hello";
+		String s2 = s1+"World";
+		// 上面操作:先创建一个String对象，在字符串连接的时候,又创建了一个StringBuidler，然后调用append()方法，最后调用toString()方法
+				
+		//使用String对字符串操作会产生大量的、多余java对象。所以结果是：影响性能，占用空间
 	}
 }
